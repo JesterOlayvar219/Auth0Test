@@ -12,7 +12,16 @@ class App extends Component {
   render() {
     const { loading } = this.context;
     if (loading) {
-      return <div>Loading...</div>;
+      return (
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ minHeight: "100vh" }}
+        >
+          <div className="spinner-border text-primary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      );
     }
     return (
       <div className="App">
